@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- UZE DIS https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GameLoop Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML5 GameLoop Template">
+    <meta name="author" content="UI Programming">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	
+
+    <canvas tabindex="1" id="the_canvas" width="1800" height="850" style="border: black 1px solid;">
+        Oops! looks like your browser does not support canvas tag
+    </canvas>
+	<br>
+	<div class="attacks">
+		<button onclick="Tier1Attack()" id="button1" class="selectAttackButtons">Tier 1 Attack</button>
+		<button onclick="Tier2Attack()" id="button2" class="selectAttackButtons">Tier 2 Attack</button>
+		<button onclick="Tier3Attack()" id="button3" class="selectAttackButtons">Tier 3 Attack</button>
+	</div>
+	<style>
+	.attacks {
+	 margin: 0;
+	 position: absolute;
+	 top: 68%;
+	 left: 2%;
+	</style>
+	<div class="endTurn">
+		<button onclick="endTurn()" class="TurnButton">End Turn</button>
+	</div>
+	<style>
+	.endTurn {
+	 margin: 0;
+	 position: absolute;
+	 top: 2%;
+	 left: 92%;
+	</style>
+	<div onload="endTurn()" class="money">
+		<button>Money <span id="myMoney"></button>
+	</div>
+	<style>
+	.money {
+	 margin: 0;
+	 position: absolute;
+	 top: 68%;
+	 left: 93%;
+	</style>
+	
+
+
+</body>
+
+    <!--JavaScript File-->
+    <script src="./js/script.js"></script>
+
+</html>
