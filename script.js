@@ -1,4 +1,5 @@
 let slideIndex = 0;
+let menuLinks = document.getElementById("menu-links");
 showSlides();
 
 function showSlides() {
@@ -16,3 +17,8 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 6000);
 } 
+
+
+function toggleMenu() {
+    menuLinks.classList.toggle('show-menu');
+}
