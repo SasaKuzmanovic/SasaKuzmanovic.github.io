@@ -31,6 +31,7 @@ nav ul li{
 }
 
 nav ul li:hover{
+    animation: sizeChange;
     -webkit-animation: sizeChange 500ms;
     transform: scale(1.2);
 }
@@ -55,6 +56,7 @@ nav .logo{
 .nav-btn:hover{
     background: rgb(31, 90, 1);
     color: white;
+    animation: colorChange;
     -webkit-animation: colorChange 500ms;
     -webkit-animation: sizeChange 500ms;
     transform: scale(1.2);
@@ -68,7 +70,7 @@ nav .logo{
 .header{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#000 0%, #060505 60%, #9dff00 100%);
+    background: linear-gradient(#000 0%, #221b1b 80%, #321f1f 100%);
     padding: 0 10%;
     justify-content: center;
 }
@@ -117,6 +119,7 @@ nav .logo{
 .yellow-btn:hover{
     background: rgb(31, 90, 1);
     color: white;
+    animation: sizeChange;
     -webkit-animation: colorChange 500ms;
     -webkit-animation: sizeChange 500ms;
     transform: scale(1.2);
@@ -140,9 +143,23 @@ nav .logo{
 }
 
 .gym-img{
+    animation-name: fadeIn;
+    animation-duration: 6s;
     width: 80%;
     height: 90%;
     position: absolute;
     bottom:5%;
-    opacity: 10%;
+    opacity: 20%;
 }
+
+@keyframes fadeIn{
+    0% {opacity: 0%;}
+    20% {opacity: 20%;}
+    100% {opacity: 20%;}
+
+}
+
+.slides{
+    display: none;
+}
+
