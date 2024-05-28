@@ -89,6 +89,8 @@ nav .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    -webkit-animation: fadeInTrue 2s;
 }
 
 .header button{
@@ -165,6 +167,13 @@ nav .logo{
 
 }
 
+@keyframes fadeInTrue{
+    0% {opacity: 0%;}
+    50% {opacity: 0%;}
+    100% {opacity: 100%;}
+
+}
+
 .slides{
     display: none;
 }
@@ -189,12 +198,29 @@ nav .logo{
     color:#fff;
     text-align: center;
     overflow:inherit;
+
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.8s;
 }
 
 .cards{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+
+.vidim{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
 }
 
 .box{
@@ -373,16 +399,16 @@ nav .logo{
         font-size: 40px;
     }
     .cards{
-        display: block;
+        display:block;
         align-items: center;
         justify-content: center;
     }
 
     .box{
-        margin-top : 30px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
