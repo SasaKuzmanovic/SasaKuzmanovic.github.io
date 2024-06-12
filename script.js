@@ -1,4 +1,3 @@
-let slideIndex = 0;
 let menuLinks = document.getElementById("menu-links");
 
 const observer = new IntersectionObserver((entries) => {
@@ -14,30 +13,22 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
+const hiddenHeader = document.querySelectorAll('.header');
+
 const hiddenCards = document.querySelectorAll('.cards');
 const hiddenText = document.querySelectorAll('.title-text');
+
+
+const hiddenTitle = document.querySelectorAll('.improvement-text');
+const hiddenImageLocation = document.querySelectorAll('.image-location');
+
+hiddenHeader.forEach((el) => observer.observe(el));
+
 hiddenCards.forEach((el) => observer.observe(el));
 hiddenText.forEach((el) => observer.observe(el));
 
-
-
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 6000);
-} 
+hiddenTitle.forEach((el) => observer.observe(el));
+hiddenImageLocation.forEach((el) => observer.observe(el));
 
 
 function toggleMenu() {

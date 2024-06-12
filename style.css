@@ -5,8 +5,13 @@
     font-family: "Montserrat", sans-serif;
 }
 
+
+body{
+    background: linear-gradient(#000000 0%, #393939 60%, #8f8f8f 100%);
+}
+
 nav{
-    background:#000;
+    background: linear-gradient(rgba(45, 45, 45, 0.693)0%, rgba(82, 82, 82, 0.394) 10%,rgba(136, 136, 136, 0.061)100%);
     position: fixed;
     top: 0;
     left: 0;
@@ -15,10 +20,19 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 15px 10%;
-    border-bottom: 1px solid #000;
     z-index: 10;
     color: #9dff00;
+    opacity: 40%;
+    transition: 0.2s;
 }
+
+nav:hover{
+
+    background: linear-gradient(rgba(45, 45, 45, 0.693)0%, rgba(60, 60, 60, 0.394) 10%,rgba(136, 136, 136, 0.27)100%);
+    opacity: 100%;
+    transition: 0.2s;
+}
+
 
 nav ul li{
     color: #9dff00;
@@ -28,6 +42,7 @@ nav ul li{
     margin: 10px 30px;
     font-weight: 500;
     cursor: pointer;
+    text-shadow: -1px 0px 2px rgba(0,0,0,1);
 }
 
 nav ul li:hover{
@@ -51,15 +66,17 @@ nav .logo{
     outline: 0;
     border-radius: 40px;
     cursor: pointer;
+    box-shadow: 1px -1px 1px rgba(0,0,0,1);
+    transition: 0.5s;
 }
 
 .nav-btn:hover{
     background: rgb(31, 90, 1);
     color: white;
     animation: colorChange;
-    -webkit-animation: colorChange 500ms;
-    -webkit-animation: sizeChange 500ms;
+    animation: sizeChange;
     transform: scale(1.2);
+    transition: 0.5s;
 }
 
 .nav-btn img{
@@ -67,31 +84,85 @@ nav .logo{
     margin-left: 8px;
 }
 
+/* =====================HEADER CONTENT===================== */
+
 .header{
     width: 100%;
-    min-height: 80vh;
-    background: linear-gradient(#000 0%, #221b1b 80%, #321f1f 100%);
+    min-height: 100vh;
     padding: 0 10%;
-    justify-content: center;
-    align-items: center;
+    display: flex;
 }
 
-.header h1{
-    text-align: center;
-    margin-top: 300px;
-    font-size: 10vw; 
-    line-height: 11vw;
-    color: #fff;
+.diagonal-background{
+    background: #9dff00;
+    width: 100%;
+    height: 50%;
+    transform: skewY(-4deg);
 }
 
-.btn-container{
-    margin-top: 5%;
+.left-div{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-    -webkit-animation: fadeInTrue 2s;
+    flex-direction: column;
+    width: 45%;
+    transform: skewY(4deg);
 }
+
+.heading-text{
+    font-size: 7VW; 
+    line-height: 7vw;
+    color: #fff;
+    text-shadow: -5px 3px 5px rgba(0,0,0,1);
+}
+
+.main-button{
+    margin-top: 10%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transform: skewY(-4deg);
+}
+
+.main-button img{
+    width: 15%;
+    height: 5%;
+}
+
+.button-class{
+    background: linear-gradient(#ffffff 0%, #848484 80%, #6d6d6d 100%);;
+    box-shadow: -5px 3px 5px rgba(0,0,0,1);;
+    border-radius: 40px;
+    opacity: 20%;
+    transition: 1s;
+}
+
+.button-class img{
+    margin-left: 20px;                    
+}
+
+
+.right-div{
+    display: flex;
+    margin-left: 10%;
+    width: 45%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.newImage{
+    
+    height: 50vw;
+    margin-left: 20%;
+    position: absolute;
+    max-width: auto;
+    z-index: -1;
+}
+
+
+
+/* =====================BUTTON CONTENT===================== */
 
 .header button{
     margin-top: 1%;
@@ -105,34 +176,6 @@ nav .logo{
     cursor: pointer;
 }
 
-.yellow-btn{
-    background: #9dff00;
-    color: #000000;
-    position: relative;
-    font-size: 16px;
-    padding: 15px 15px;
-    border: 0;
-    outline: 0;
-    border-radius: 40px;
-    cursor: pointer;
-}
-
-.yellow-btn img{
-    width: 60px;
-    border-radius: 50%;
-    padding: 10px;
-    margin-left: 10px;
-}
-
-.yellow-btn:hover{
-    background: rgb(31, 90, 1);
-    color: white;
-    animation: sizeChange;
-    -webkit-animation: colorChange 500ms;
-    -webkit-animation: sizeChange 500ms;
-    transform: scale(1.2);
-}
-
 @keyframes colorChange {
     0% {color: black;}
     100%{color: white;}
@@ -143,53 +186,22 @@ nav .logo{
     100% {transform: scale(1.2);}
 }
 
-.header p{
-    margin-top: 5%;
-    max-width: 360px;
-    color: white;
-    font-weight: 500;
-}
-
-.gym-img{
-    animation-name: fadeIn;
-    animation-duration: 6s;
-    width: 80%;
-    height: 90%;
-    position: absolute;
-    bottom:5%;
-    opacity: 20%;
-}
-
-@keyframes fadeIn{
-    0% {opacity: 0%;}
-    20% {opacity: 20%;}
-    100% {opacity: 20%;}
-
-}
-
-@keyframes fadeInTrue{
-    0% {opacity: 0%;}
-    50% {opacity: 0%;}
-    100% {opacity: 100%;}
-
-}
-
-.slides{
-    display: none;
-}
-
 .menu-icon{
     display:none;
 }
+
+
+/* ====================== Secondary Elements ====================== */
 
 .secondary-elements{
     display: block;
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
     padding: 0px 10%;
-    background: linear-gradient(#321f1f 0%, #221b1b 20%, #000 100%);
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .title-text{
@@ -198,6 +210,7 @@ nav .logo{
     color:#fff;
     text-align: center;
     overflow:inherit;
+    text-shadow: -5px 3px 5px rgba(0,0,0,1);
 
     opacity: 0;
     filter:blur(5px);
@@ -206,6 +219,7 @@ nav .logo{
 }
 
 .cards{
+    margin-top: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,13 +228,6 @@ nav .logo{
     filter:blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
-}
-
-
-.vidim{
-    opacity: 1;
-    filter:blur(0);
-    transform: translateX(0);
 }
 
 .box{
@@ -245,7 +252,8 @@ nav .logo{
 }
 
 .box:hover{
-    height: 400px;
+    height: 550px;
+    transform: scale(1.2);
 }
 
 
@@ -303,7 +311,7 @@ nav .logo{
 
 .box:hover .content{
     opacity: 1;
-    transition: 0.5s;
+    transition: 1.0s;
 }
 
 .box .content h2{
@@ -314,13 +322,130 @@ nav .logo{
     letter-spacing: 1px;
 }
 
+.box .info-box{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.box:hover .info-box{
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.box .info-box h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: white;
+}
+
+/* ======================Tertiary Elements ====================== */
+
+.tertiary-elements{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 0px 10%;
+}
+
+.improvement-text{
+    opacity: 0;
+    filter: blur(10px);
+    transition: 2s;
+}
+
+.improvement-text h1{
+    font-size: 6VW; 
+    line-height: 6vw;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: -5px -1px 5px rgba(0,0,0,1);
+}
+
+.image-location{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+.picture{
+    margin: 5%;
+}
+
+.picture img{
+    position: relative;
+    max-width:500px;
+    max-height: 450px;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+.picture img:hover{
+    transform: scale(1.2);
+    border-radius: 2%;
+    transition: 0.5s;
+}
+
+
+.location{
+    position: relative;
+    margin: 5%;
+}
+
+.location iframe{
+    max-width: 500px;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+.location iframe:hover{
+    transform: scale(1.2);
+    border-radius: 2%;
+    transition: 0.5s;
+}
+
+
+
+.vidim{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+    transition: 1s;
+}
+
+
 
 
 /* Media for navbar content */
 
 @media only screen and (max-width: 950px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
     nav {
         height: 15%;
+        opacity: 1;
         border-bottom: 1px solid #9dff00;
     }
 
@@ -354,15 +479,53 @@ nav .logo{
 
     .header{
         overflow: visible;
-        display: block;
+        display: flex;
+        flex-direction: column;
+
         width: 100%;
-        align-items: center;
-        justify-content: center;
-        
+        height: 60vh;
+
+        opacity: 0;
+        filter: blur(2px);
+        transition: 1.5s;
     }
 
-    .header h1{
+    .left-div{
+        width: 100%;
+        display: block;
+        justify-content: baseline;
+    }
+
+    .heading-text{
         text-align: center;
+        margin-top: 60%;
+        font-size: 14vw;
+        line-height: 14vw;
+    }
+
+    .button-class{
+        opacity: 0.5;
+        text-align: center;
+        font-size: 30vw;
+        font-weight: 500;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+
+    .right-div{
+        width: 100%;
+        height: 100vw;
+        margin-left: 0;
+        display:flex;
+        justify-content: center;
+    }
+
+    .newImage{
+        position: absolute;
+        margin-left: 0;
+        width: 80vw;
+        height: 80vw;
     }
 
     .menu-icon{
@@ -373,29 +536,18 @@ nav .logo{
     .show-menu{
         max-height: 60px;
     }
-    
-    .btn-container{
-        display:block;
-    }
-    
 
-    .yellow-btn{
-        margin-top: 100px;
+
+    /* =================SECONDARY MOBILE================= */
+
+    .secondary-elements{
         display: block;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+        height:fit-content;
     }
 
-    .gym-img{
-        
-        left: 0;
-        width: 100%;
-        max-height: 100vh;
-    }
-
-
-    .title-text{
+    .title-text{   
+        line-height: 20vw;
+        position: relative;
         font-size: 40px;
     }
     .cards{
@@ -411,6 +563,46 @@ nav .logo{
         margin-right: auto;
     }
 
-}
+    .box:hover{
+        z-index: 1;
+    }
+
+    /* =================TERTIARY MOBILE================= */
+    .tertiary-elements{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height:fit-content;
+    }
+
+    .improvement-text{
+        display: flex;
+        position: relative;
+    }
+
+    .image-location{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        opacity: 1;
+        filter: blur(5px);
+        transition: 1s;
+    }
+
+    .picture img, .location iframe{
+        height: 100%;
+        width: 100%;
+    }
+
+    .vidim{
+        opacity: 1;
+        filter:blur(0);
+        transform: translateX(0);
+        transition: 1s;
+    }
+
+} 
 
 
