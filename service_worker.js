@@ -1,4 +1,4 @@
-var cacheName = 'Top Performance Fitness';
+var cacheName = 'TPF-pwa';
 var filesToCache = [
   '/',
   '/index.html',
