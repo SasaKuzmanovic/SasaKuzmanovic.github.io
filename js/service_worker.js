@@ -5,8 +5,10 @@ var filesToCache = [
   '/memberships.html',
   '/programmes.html',
   '/staff.html',
-  '/style.css',
-  '/script.js'
+  '/css/style.css',
+  '/css/staff.css',
+  '/css/memberships.css',
+  '/js/script.js'
 ];
 
 // Cache contents when Offline See Cache

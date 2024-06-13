@@ -7,35 +7,94 @@
         <meta name="viewport" content ="width=device-width, initial-scale=1">
         <meta name="author" content ="Sasa Kuzmanovic">
 
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./css/staff.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body style="background: linear-gradient(#000000 0%, #393939 60%, #8f8f8f 100%);">
         <nav>
             <a href="index.html">
                 <img src="./img/logo2.png" alt="" class ="logo">
             </a>
-            <ul>
-                <a href="index.html">
+            <ul id="menu-links">
+                <a href="index.html" style="text-decoration: none;">
                     <li>Home</li>
                 </a>    
-                <a href="staff.html"> 
+                <a href="staff.html" style="text-decoration: none;"> 
                     <li>Staff</li>
                 </a>
-                <a href="programmes.html">
+                <a href="programmes.html" style="text-decoration: none;">
                     <li>Programmes</li>
                 </a>
-                <a href="memberships.html">
+                <a href="memberships.html" style="text-decoration: none;">
                     <li>Memberships</li>
                 </a>
             </ul>
-            <a href="programmes.html">
+            <a href="programmes.html" style="text-decoration: none;">
                 <button class="nav-btn">Get Started <img src="./img/arrow.png" alt=""></button>
             </a>
+    
+            <img src="./img/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
         </nav>
-    </body>
 
+
+        <div class="header">
+
+            <div class="title-text">
+                <h1>MEET THE STAFF</h1>
+            </div>
+
+            <div class="cards">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="./img/vytautas.png" alt="">
+                    </div>
+
+                    <div class="content2">
+                        <h2>Vytautas Lalas</h2>
+                    </div>
+
+                    <div class="content">
+                        <h2>Professional Athlete</h2>
+                    </div>
+
+                    
+        
+                    <div class="info-box">
+                        <h2>Vytautas is a Lithuanian professional strongman <br> 
+                            Winner of 2013 Arnold Strongman Classic <br>
+                            2 Times Lithuania's Strongest Man (2016/2018)
+                        </h2>
+                    </div>
+                </div>
+        
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="./img/marius.png" alt="">
+                    </div>
+
+                    <div class="content2">
+                        <h2>Marius Lalas</h2>
+                    </div>
+
+                    <div class="content">
+                        <h2>Professional Athlete</h2>
+                    </div>
+        
+                    <div class="info-box">
+                        <h2>Marius is a Lithuanian professional strongman <br>
+                            Winner of the 2019 Lithuania's Strongest man <br>
+                            3 Times Qualified for Europe's Strongest Man (2016/2021/2022)
+                        </h2>
+                    </div>
+                </div>
+        
+                
+            </div>
+
+        </div>
+    </body>
+    <script src="./js/script.js"></script>
 </html>

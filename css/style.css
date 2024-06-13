@@ -136,6 +136,12 @@ nav .logo{
     transition: 1s;
 }
 
+.button-class:hover{
+    opacity: 1;
+    scale: 1.1;
+    transition: all 1s;
+}
+
 .button-class img{
     margin-left: 20px;                    
 }
@@ -174,16 +180,6 @@ nav .logo{
     font-size: 18px;
     margin-right: 40px;
     cursor: pointer;
-}
-
-@keyframes colorChange {
-    0% {color: black;}
-    100%{color: white;}
-}
-
-@keyframes sizeChange {
-    0% {transform: scale(1.0);}
-    100% {transform: scale(1.2);}
 }
 
 .menu-icon{
@@ -446,6 +442,7 @@ nav .logo{
     nav {
         height: 15%;
         opacity: 1;
+        background: black;
         border-bottom: 1px solid #9dff00;
     }
 
