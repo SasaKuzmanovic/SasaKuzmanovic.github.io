@@ -1,4 +1,5 @@
 let menuLinks = document.getElementById("menu-links");
+var videos = document.getElementsByClassName("videji");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
@@ -12,6 +13,23 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+
+
+function showVideos() {
+
+    for (var i = 0; i < videos.length; i++)
+        {
+            if (document.getElementsByClassName("videji")[i].style.display == "none")
+                {
+                    document.getElementsByClassName("videji")[i].style.display = "block";
+                } else{
+                    document.getElementsByClassName("videji")[i].style.display = "none";
+                }
+            
+        }
+    
+}
+
 
 const hiddenHeader = document.querySelectorAll('.header');
 
