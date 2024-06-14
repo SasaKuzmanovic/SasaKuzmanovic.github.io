@@ -95,7 +95,7 @@ nav .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10%;
+    margin-left: 80%;
     width: fit-content;
     height: 100px;
     background: black;
@@ -522,6 +522,49 @@ nav .logo{
     nav ul li{
         margin: 10px;
         font-size: 14px;
+    }
+
+    .pwa-install{
+        position: relative;
+        margin-top: 17vh;
+    }
+    
+    .install-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+        width: 90vw;
+        height: 100px;
+        background: black;
+        opacity: 0.85;
+        border-radius: 20px;
+    }
+    
+    .install-box h1{
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 20px;
+        font-weight: 300;
+    
+        color: white;
+    }
+    
+    .install-box img{
+        margin-left: 6%;
+        width: 50%;
+        height: 60%;
+    }
+    
+    .install-box button{
+        margin-right: 10%;
+        height: 40px;
+        width: 150px;
+        border-radius: 2px;
+        background: linear-gradient(#ffffff 0%, #848484 20%, #9dff00 100%);;
+        color: rgb(0, 0, 0);
+        font-size: 22px;
+        font-weight: 700;
     }
 
     .header{
