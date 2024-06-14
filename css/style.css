@@ -93,18 +93,36 @@ nav .logo{
 
     justify-content: center;
     align-items: center;
-    height: fit-content;
 
     margin-top: 5%;
 }
 
-.pwa-install button{
+.install-box{
+    display: flex;
+    width: 80vw;
+    height: 100px;
+    background-color: black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9;
+}
+
+.install-box h1{
+    color: white; 
+    z-index: 10;
+}
+
+.install-box button{
+    margin-left: 25%;
     height: 50px;
     width: 10vh;
     border-radius: 10%;
     background: greenyellow;
     color: rgba(5, 5, 5, 0.636);
     font-size: 22px;
+    
 }
 
 

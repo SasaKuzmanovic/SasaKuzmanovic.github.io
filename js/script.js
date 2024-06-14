@@ -63,6 +63,9 @@ function toggleMenu() {
 
 let installPrompt = null;
 const installButton = document.querySelector("#install");
+const installBox = document.querySelector("#installbox");
+
+var pwa = document.getElementsByClassName("pwa-install");
 
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
@@ -79,4 +82,8 @@ installButton.addEventListener("click", async () => {
     console.log(`Install prompt was: ${result.outcome}`);
     installPrompt = null;
     installButton.setAttribute("hidden", "");
+    pwa.style.display= "none";
+
+    console.log(pwa.style.display);
+    
   });
