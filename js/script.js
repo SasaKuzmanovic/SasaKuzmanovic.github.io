@@ -81,11 +81,6 @@ window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   installPrompt = event;
   installButton.removeAttribute("hidden");
-  
-
-  doc.style.display= "flex";
-
-  pwa.style.display = "flex";
 
   console.log(typeof(pwa));
   console.log("i missed I guess");
