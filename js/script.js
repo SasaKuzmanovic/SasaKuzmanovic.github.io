@@ -65,27 +65,14 @@ function toggleMenu() {
 
 let installPrompt = null;
 const installButton = document.querySelector("#install");
-const installBox = document.querySelector("#installbox");
-
-var pwa = document.getElementsByClassName("pwa-install");
+const installBox = document.querySelector("#noviid");
 
 
-
-function addBox(){
-    pwa = document.getElementsByClassName('pwa-install');
-
-    pwa.style.display = "flex";
-}
 
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   installPrompt = event;
-  installButton.removeAttribute("hidden");
-
-  console.log(typeof(pwa));
-  console.log("i missed I guess");
-
-  addBox();
+  installBox.removeAttribute("hidden");
 
 });
 
@@ -99,8 +86,5 @@ installButton.addEventListener("click", async () => {
     installPrompt = null;
     installButton.setAttribute("hidden", "");
 
-    document.querySelector("#installbox").style.display = "none";
-
-    console.log(pwa.style.display);
-    
+    installBox.setAttribute("hidden", "");
   });

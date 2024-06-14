@@ -88,7 +88,6 @@ nav .logo{
 
 .pwa-install{
     position: relative;
-    display: none;
     flex-direction: column;
 
     justify-content: center;
@@ -190,7 +189,7 @@ nav .logo{
 
 .newImage{
     
-    height: 50vw;
+    height: 48vw;
     margin-left: 20%;
     position: absolute;
     max-width: auto;
