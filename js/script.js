@@ -82,7 +82,8 @@ installButton.addEventListener("click", async () => {
     console.log(`Install prompt was: ${result.outcome}`);
     installPrompt = null;
     installButton.setAttribute("hidden", "");
-    pwa.style.display= "none";
+
+    document.querySelector("#installbox").style.display = "none";
 
     console.log(pwa.style.display);
     
