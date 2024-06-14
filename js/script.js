@@ -70,6 +70,7 @@ function toggleMenu() {
 let installPrompt = null;
 const installButton = document.querySelector("#install");
 const installBox = document.querySelector("#noviid");
+const closeButton = document.querySelector("#close");
 
 
 
@@ -90,5 +91,9 @@ installButton.addEventListener("click", async () => {
     installPrompt = null;
     installButton.setAttribute("hidden", "");
 
+    installBox.setAttribute("hidden", "");
+  });
+
+closeButton.addEventListener("click", async () => {
     installBox.setAttribute("hidden", "");
   });
