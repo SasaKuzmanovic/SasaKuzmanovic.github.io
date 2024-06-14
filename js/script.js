@@ -1,6 +1,8 @@
 let menuLinks = document.getElementById("menu-links");
 var videos = document.getElementsByClassName("videji");
 
+var doc = document.getElementsByClassName('pwa-install');
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
         console.log(entry)
@@ -67,13 +69,29 @@ const installBox = document.querySelector("#installbox");
 
 var pwa = document.getElementsByClassName("pwa-install");
 
+
+
+function addBox(){
+    pwa = document.getElementsByClassName('pwa-install');
+
+    pwa.style.display = "flex";
+}
+
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   installPrompt = event;
   installButton.removeAttribute("hidden");
-  var doc = document.getElementsByClassName('pwa-install');
+  
 
   doc.style.display= "flex";
+
+  pwa.style.display = "flex";
+
+  console.log(typeof(pwa));
+  console.log("i missed I guess");
+
+  addBox();
+
 });
 
 
