@@ -71,6 +71,7 @@ window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   installPrompt = event;
   installButton.removeAttribute("hidden");
+  document.querySelector("#installbox").style.display = "flex";
 });
 
 
