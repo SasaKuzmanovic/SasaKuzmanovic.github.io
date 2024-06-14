@@ -45,6 +45,8 @@ const hiddenImageLocation = document.querySelectorAll('.image-location');
 const hiddenBox = document.querySelectorAll('.box');
 const hiddenPayables = document.querySelectorAll('.payables');
 
+const hiddenPopup = document.querySelectorAll('.pwa-install');
+
 hiddenHeader.forEach((el) => observer.observe(el));
 
 hiddenCards.forEach((el) => observer.observe(el));
@@ -55,6 +57,8 @@ hiddenImageLocation.forEach((el) => observer.observe(el));
 
 hiddenBox.forEach((el) => observer.observe(el));
 hiddenPayables.forEach((el) => observer.observe(el));
+
+hiddenPopup.forEach((el) => observer.observe(el));
 
 function toggleMenu() {
     menuLinks.classList.toggle('show-menu');

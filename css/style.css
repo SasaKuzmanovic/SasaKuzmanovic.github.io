@@ -89,6 +89,12 @@ nav .logo{
 .pwa-install{
     position: relative;
     margin-top: 15vh;
+
+    opacity: 0;
+    transform: translateX(-100%);
+
+
+    transition: 2.0s;
 }
 
 .install-box{
@@ -527,6 +533,11 @@ nav .logo{
     .pwa-install{
         position: relative;
         margin-top: 17vh;
+
+        opacity: 0;
+        transform: translateX(-100%);
+
+        transition: 1.5s;
     }
     
     .install-box{
@@ -537,7 +548,6 @@ nav .logo{
         width: 90vw;
         height: 100px;
         background: black;
-        opacity: 0.85;
         border-radius: 20px;
     }
     
