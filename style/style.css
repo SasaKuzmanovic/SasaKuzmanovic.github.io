@@ -203,6 +203,9 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
+
+      cursor: pointer;
+      text-decoration: none;
     }
 
     .contact-card::before {
@@ -226,6 +229,10 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
+    .contact-card:active {
+      transform: scale(0.97);
+    }
+
     .contact-card h3 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
@@ -233,7 +240,7 @@
     }
 
     .contact-card p {
-      font-size: 1.1rem;
+      font-size: 1.0rem;
     }
 
     .contact-icon {
