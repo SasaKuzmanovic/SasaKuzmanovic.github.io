@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #342f2b;
+  background: #f8f4ef;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f8f4ef; }
+button { font: inherit; }
+button:disabled { cursor: wait; opacity: .72; }
+.site-shell { overflow: hidden; }
+
+.hero {
+  min-height: 960px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(180deg, rgba(48,39,34,.22), rgba(48,39,34,.60)),
+    url("./maunaicoprnjica.jpeg")
+    center 69% / cover;
+  color: #fff;
+}
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .16; pointer-events: none; }
+.glow-one { width: 300px; height: 300px; background: #e9c6a8; top: 15%; left: -100px; }
+.glow-two { width: 380px; height: 380px; background: #fff1df; bottom: -180px; right: -120px; }
+
+.nav {
+  width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 28px 0;
+  display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2;
+}
+.monogram { font-family: "Cormorant Garamond", serif; font-size: 27px; letter-spacing: 1px; }
+.monogram span { font-size: 17px; margin: 0 5px; }
+.upload-button, .primary-button {
+  border: 0; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s;
+}
+.upload-button:hover, .primary-button:hover { transform: translateY(-2px); }
+.upload-button {
+  background: rgba(255,255,255,.95); color: #3c322d; padding: 13px 20px;
+  border-radius: 999px; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,.16);
+}
+.upload-icon { font-size: 20px; margin-right: 7px; vertical-align: -1px; }
+
+.hero-content { margin: auto; text-align: center; max-width: 780px; padding: 80px 24px 110px; position: relative; z-index: 1; }
+.eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 600; margin: 0 0 15px; }
+.hero h1 {
+  font-family: "Cormorant Garamond", serif; font-size: clamp(76px, 12vw, 142px);
+  line-height: .78; font-weight: 500; margin: 0; letter-spacing: -4px;
+}
+.ornament { display: flex; justify-content: center; align-items: center; gap: 13px; margin: 30px 0 15px; }
+.ornament span { width: 65px; height: 1px; background: rgba(255,255,255,.6); }
+.ornament b { font-weight: 400; font-size: 15px; }
+.date { letter-spacing: 5px; font-size: 12px; margin: 0; }
+.intro { font-family: "Cormorant Garamond", serif; font-size: 22px; line-height: 1.45; margin: 23px auto 30px; color: rgba(255,255,255,.9); }
+.primary-button {
+  color: #3a302a; background: #f7e8d9; padding: 15px 23px; border-radius: 999px;
+  font-weight: 600; box-shadow: 0 12px 30px rgba(0,0,0,.15);
+}
+.primary-button.dark { background: #332b27; color: #fff; box-shadow: none; }
+.primary-button span { font-size: 20px; margin-right: 5px; }
+.scroll-cue { position: absolute; bottom: 27px; left: 50%; transform: translateX(-50%); font-size: 9px; letter-spacing: 2px; opacity: .8; white-space: nowrap; }
+.scroll-cue span { font-size: 15px; margin-left: 7px; }
+
+.gallery-section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 105px 0 95px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 45px; }
+.section-heading .eyebrow { color: #a48167; }
+h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(54px, 7vw, 78px); font-weight: 500; line-height: .85; margin: 0; letter-spacing: -2px; }
+.photo-count { display: flex; align-items: baseline; gap: 9px; color: #8a7c73; border-bottom: 1px solid #d9cec4; padding-bottom: 8px; }
+.photo-count strong { color: #3d342f; font-family: "Cormorant Garamond", serif; font-size: 30px; font-weight: 600; }
+.photo-count span { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+.notice { margin: -18px 0 30px; padding: 13px 16px; border-radius: 10px; font-size: 13px; }
+.notice.success { background: #e5eee5; color: #38533b; }
+.notice.error { background: #f2dfda; color: #713e35; }
+.notice code { font-family: monospace; }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 190px; gap: 14px; }
+.photo-card { position: relative; overflow: hidden; padding: 0; border: 0; cursor: pointer; background: #e7ddd5; border-radius: 3px; min-width: 0; }
+.photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.photo-card:hover img { transform: scale(1.045); }
+.card-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(25,20,17,.55)); display: flex; justify-content: center; align-items: end; padding: 19px; opacity: 0; transition: opacity .25s; }
+.photo-card:hover .card-overlay { opacity: 1; }
+.card-overlay span { color: white; font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; }
+.card-0 { grid-column: span 5; grid-row: span 2; }
+.card-1 { grid-column: span 4; grid-row: span 1; }
+.card-2 { grid-column: span 3; grid-row: span 2; }
+.card-3 { grid-column: span 4; grid-row: span 1; }
+.card-4 { grid-column: span 5; grid-row: span 2; }
+
+.empty-state { text-align: center; padding: 90px 20px; border: 1px solid #dfd2c8; background: rgba(255,255,255,.25); }
+.empty-state h3 { font-family: "Cormorant Garamond", serif; font-size: 35px; font-weight: 500; margin: 5px 0; }
+.empty-state p { color: #796e67; margin: 0 0 24px; }
+.mini-ornament { font-size: 18px; color: #a48167; margin-bottom: 10px; }
+.gallery-footer { text-align: center; margin-top: 70px; }
+.gallery-footer p { font-family: "Cormorant Garamond", serif; font-size: 25px; margin: 0 0 13px; }
+.text-button { border: 0; background: transparent; cursor: pointer; color: #7d604d; text-transform: uppercase; letter-spacing: 1.4px; font-size: 10px; font-weight: 600; }
+.text-button span { font-size: 17px; margin-left: 8px; }
+
+footer { background: #332b27; color: #e9ddd3; text-align: center; padding: 55px 20px; }
+footer p { font-family: "Cormorant Garamond", serif; font-size: 21px; margin: 10px 0; }
+footer small { opacity: .55; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+
+.lightbox { position: fixed; z-index: 20; inset: 0; background: rgba(22,18,16,.94); display: flex; align-items: center; justify-content: center; padding: 50px 80px; }
+.lightbox-inner { max-width: min(1100px, 90vw); max-height: 88vh; position: relative; }
+.lightbox-inner img { display: block; max-width: 100%; max-height: 82vh; object-fit: contain; box-shadow: 0 20px 70px rgba(0,0,0,.4); }
+.slide-caption { color: rgba(255,255,255,.7); text-align: center; font-size: 11px; padding-top: 13px; letter-spacing: 1px; }
+.close-button, .slide-arrow { position: absolute; border: 0; background: transparent; color: white; cursor: pointer; z-index: 2; }
+.close-button { right: 25px; top: 14px; font-size: 38px; font-weight: 200; }
+.slide-arrow { top: 50%; transform: translateY(-50%); font-family: "Cormorant Garamond", serif; font-size: 70px; width: 70px; height: 100px; opacity: .8; }
+.slide-arrow:hover { opacity: 1; }
+.slide-arrow.left { left: 8px; }
+.slide-arrow.right { right: 8px; }
+
+@media (max-width: 760px) {
+  .hero { min-height: 680px; }
+  .nav { width: calc(100% - 30px); padding-top: 18px; }
+  .upload-button { padding: 11px 15px; font-size: 12px; }
+  .hero-content { padding-top: 60px; }
+  .hero h1 { letter-spacing: -2px; }
+  .intro { font-size: 20px; }
+  .gallery-section { width: calc(100% - 30px); padding-top: 70px; }
+  .section-heading { align-items: start; flex-direction: column; }
+  .photo-count { align-self: stretch; justify-content: flex-start; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
+  .photo-card, .card-0, .card-1, .card-2, .card-3, .card-4 { grid-column: span 1; grid-row: span 1; }
+  .card-0 { grid-column: span 2; grid-row: span 2; }
+  .card-4 { grid-column: span 2; }
+  .lightbox { padding: 35px 16px; }
+  .slide-arrow { font-size: 55px; width: 45px; }
+  .slide-arrow.left { left: 0; }
+  .slide-arrow.right { right: 0; }
+}
